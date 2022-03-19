@@ -9,3 +9,4 @@ Conventionally, store folder is used for redux related files.
 - Redux-Store-File
 - Redux-Setting-Redux-Store-To-Be-Used-By-Components
 - Redux-Manipulating-Data-In-Specific-Component-File
+- Redux-Class-Based-Components
