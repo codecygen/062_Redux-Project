@@ -18,6 +18,9 @@ const Counter = () => {
   const counter = useSelector(state => state.counter);
 
   // Redux-Manipulating-Data-In-Specific-Component-File
+  const show = useSelector(state => state.showCounter);
+
+  // Redux-Manipulating-Data-In-Specific-Component-File
   const incrementHandler = () => {
     dispatch({ type: 'increment' });
   };
@@ -27,16 +30,27 @@ const Counter = () => {
     dispatch({ type: 'decrement' });
   };
 
-  const toggleCounterHandler = () => {};
+  // Redux-Manipulating-Data-In-Specific-Component-File
+  const increaseHandler = () => {
+    // amount key is passed as action.amount to the
+    // redux store file.
+    dispatch({ type: 'increase', amount: 5 });
+  };
+
+  const toggleCounterHandler = () => {
+    dispatch({ type: 'toggle' })
+  };
 
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
       {/* Redux-Manipulating-Data-In-Specific-Component-File */}
-      <div className={classes.value}>{counter}</div>
+      {show && <div className={classes.value}>{counter}</div>}
       <div>
         {/* Redux-Manipulating-Data-In-Specific-Component-File */}
         <button onClick={incrementHandler}>Increment</button>
+        {/* Redux-Manipulating-Data-In-Specific-Component-File */}
+        <button onClick={increaseHandler}>Increase by 5</button>
         {/* Redux-Manipulating-Data-In-Specific-Component-File */}
         <button onClick={decrementHandler}>Decrement</button>
       </div>
