@@ -4,8 +4,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 
-import counterSlice from './counter';
-import authSlice from './auth';
+import counterSlice from './counter-slice';
+import authSlice from './auth-slice';
 
 
 // configureStore enables us to have many different slices.

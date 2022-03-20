@@ -4,7 +4,7 @@
 // In this level, it just conditionally renders if the app is authenticated
 import { useSelector, useDispatch } from 'react-redux';
 // Redux-Manipulating-Data-In-Specific-Component-File
-import { authActions } from '../store/auth';
+import { authActions } from '../store/auth-slice';
 
 import classes from './Header.module.css';
 
