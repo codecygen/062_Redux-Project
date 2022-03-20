@@ -13,3 +13,5 @@ Conventionally, store folder is used for redux related files.
 - Redux-Setting-Redux-Store-To-Be-Used-By-Components
 - Redux-Manipulating-Data-In-Specific-Component-File
 - Redux-Class-Based-Components
+- Redux-React-Counter-App-Files
+- Redux-React-Authentication-Only-Front-End

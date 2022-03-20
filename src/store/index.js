@@ -3,8 +3,10 @@
 // createReducer is also used but createSlice is even more powerful
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
+// Redux-React-Counter-App-Files
 const initialCounterState = { counter: 0, showCounter: true };
 
+// Redux-React-Counter-App-Files
 const counterSlice = createSlice({
    name: 'counter',
    initialState: initialCounterState,
@@ -32,10 +34,12 @@ const counterSlice = createSlice({
    }
 });
 
+// Redux-React-Authentication-Only-Front-End
 const initialAuthState = {
     isAuthenticated: false
 };
 
+// Redux-React-Authentication-Only-Front-End
 const authSlice = createSlice({
     name: 'authentication',
     initialState: initialAuthState,
@@ -59,6 +63,7 @@ const store = configureStore({
 });
 
 export const counterActions = counterSlice.actions;
+// Redux-React-Authentication-Only-Front-End
 export const authActions = authSlice.actions;
 export default store;
 
