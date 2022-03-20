@@ -17,10 +17,15 @@ const Counter = () => {
   // It will automatically get the latest state of the hook here.
   // If you remove the component from DOM for any reason, redux store file
   // will automatically unsubscribes this file as well.
-  const counter = useSelector(state => state.counter);
+  // If you only have a single reducer in the store file.
+  // const counter = useSelector(state => state.counter);
+  const counter = useSelector(state => state.counter.counter);
+  // Here, first counter taps into the reducer's keyword in the redux store file
+  // second counter points to the keyword of the state keywords.
+
 
   // Redux-Manipulating-Data-In-Specific-Component-File
-  const show = useSelector(state => state.showCounter);
+  const show = useSelector(state => state.counter.showCounter);
 
   // Redux-Manipulating-Data-In-Specific-Component-File
   const incrementHandler = () => {
