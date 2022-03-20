@@ -6,7 +6,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 
 // This is necessary if we use 'redux-toolkit' library
-import { counterActions } from '../store/index';
+import { counterActions } from '../store/counter';
 import classes from './Counter.module.css';
 
 const Counter = () => {

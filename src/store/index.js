@@ -1,58 +1,12 @@
 // Redux-Store-File
 
 // createReducer is also used but createSlice is even more powerful
-import { createSlice, configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
-// Redux-React-Counter-App-Files
-const initialCounterState = { counter: 0, showCounter: true };
 
-// Redux-React-Counter-App-Files
-const counterSlice = createSlice({
-   name: 'counter',
-   initialState: initialCounterState,
-   reducers: {
-       // here we don't need to accept action as an argument as there
-       // is nothing to do for the increment case
-       increment(state) {
-           // Here despite the fact this looks like a mutable way
-           // of manipulating the variable, it is in fact immutable
-           // as 'redux toolkit' library uses special means to turn this
-           // into an immutable way of manipulating the value.
-           state.counter++;
-       },
-       decrement(state) {
-           state.counter--;
-       },
-       increase(state, action) {
-        // 'payload' is a key auto assigned for action object
-        // if you use 'redux toolkit' library
-        state.counter = state.counter + action.payload;
-       },
-       toggleCounter(state) {
-           state.showCounter = !state.showCounter;
-       }
-   }
-});
+import counterSlice from './counter';
+import authSlice from './auth';
 
-// Redux-React-Authentication-Only-Front-End
-const initialAuthState = {
-    isAuthenticated: false
-};
-
-// Redux-React-Authentication-Only-Front-End
-const authSlice = createSlice({
-    name: 'authentication',
-    initialState: initialAuthState,
-    reducers: {
-        login(state) {
-            state.isAuthenticated = true;
-        },
-
-        logout(state) {
-            state.isAuthenticated = false;
-        }
-    }
-});
 
 // configureStore enables us to have many different slices.
 // it can accept only one slice as well as multiple slices
@@ -62,9 +16,8 @@ const store = configureStore({
     reducer: { counter: counterSlice.reducer, auth: authSlice.reducer },
 });
 
-export const counterActions = counterSlice.actions;
+
 // Redux-React-Authentication-Only-Front-End
-export const authActions = authSlice.actions;
 export default store;
 
 

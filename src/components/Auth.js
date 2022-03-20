@@ -6,7 +6,7 @@
 // the password entering action is performed on this component
 import { useDispatch } from 'react-redux';
 // Redux-Manipulating-Data-In-Specific-Component-File
-import { authActions } from '../store/index';
+import { authActions } from '../store/auth';
 
 
 import classes from './Auth.module.css';
